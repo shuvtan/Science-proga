@@ -6,9 +6,9 @@ import sys
 gmsh.initialize()
 
 gmsh.model.add("torus")
-tor2 = gmsh.model.occ.addTorus(0, 0, 0, 3, 1, 8, 1.9*math.pi)
-tor21 = gmsh.model.occ.addTorus(0, 0, 0, 3, 0.5, 2, 1.9*math.pi)
-fluid2 = gmsh.model.occ.cut([(3, 8)], [(3, 2)])
+tor1 = gmsh.model.occ.addTorus(0, 0, 0, 3, 1, 1, 1.9*math.pi)
+tor11 = gmsh.model.occ.addTorus(0, 0, 0, 3, 0.5, 11, 1.9*math.pi)
+fluid = gmsh.model.occ.cut([(3, 1)], [(3, 11)])
 
 gmsh.model.occ.synchronize()
 
